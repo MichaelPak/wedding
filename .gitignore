@@ -1,3 +1,5 @@
 venv
 .idea
 *.pyc
+wedding/settings.py
+db.sqlite3
