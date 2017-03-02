@@ -23,6 +23,6 @@ from web import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
-    url(r'^archive/', admin.site.urls),
-    url(r'^single/', admin.site.urls),
+    url(r'^dress_code/', views.dress_code),
+    url(r'^location/', views.location),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
