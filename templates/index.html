@@ -1,130 +1,14 @@
-<!DOCTYPE html>
-<html lang="en-us">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Amore: HTML Wedding Template by ThemeBear</title>
-
-    <!-- Favicons
-================================================== -->
-    <link rel="shortcut icon" href="favicon2.ico" type="image/x-icon">
-    <link rel="icon" href="favicon2.ico" type="image/x-icon">
-    <!-- / Favicons
-================================================== -->
-
-    <!-- >> CSS
-============================================================================== -->
-    <!-- Bootstrap styles -->
-    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- /Bootstrap Styles -->
-    <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <!-- /google web fonts -->
-    <!-- owl carousel -->
-    <link href="static/vendor/owl.carousel/assets/owl.carousel.css" rel="stylesheet">
-    <link href="static/vendor/owl.carousel/assets/owl.theme.default.min.css" rel="stylesheet">
-    <!-- /owl carousel -->
-    <!-- fancybox.css -->
-    <link href="static/vendor/animate.css" rel="stylesheet">
-    <!-- /fancybox.css -->
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="static/vendor/font-awesome/css/font-awesome.min.css">
-    <!-- /Font Awesome -->
-    <!-- Simple Lightbox -->
-    <link rel="stylesheet" href="static/vendor/simplelightbox/dist/simplelightbox.min.css">
-    <!-- /Simple Lightbox -->
-    <!-- Main Styles -->
-    <link href="static/css/styles.css" rel="stylesheet">
-    <!-- /Main Styles -->
-    <!-- >> /CSS
-============================================================================== -->
-</head>
-
-<body>
-<!-- Page Loader
-========================================================= -->
-<div class="loader" id="page-loader">
-  <div class="loading-wrapper">
-    <div class="loader-heart loader-heart1"></div>
-    <div class="loader-heart loader-heart2"></div>
-    <div class="loader-heart loader-heart3"></div>
-  </div>
-</div>
-<!-- /End of Page loader
-========================================================= -->
-<!-- Header
-================================================== -->
-<header id="masthead" class="site-header" >
-        <!-- Main header -->
-        <div class="container">
-            <!-- Navbar Header -->
-            <div class="row">
-
-                <!-- Main Navigation -->
-                <div class="col-xs-12">
-
-                <nav class="navbar navbar-default" >
-
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <!-- Mobile Menu Button -->
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <!-- /Mobile Menu Button -->
-
-                            <!-- Logo -->
-                            <div class="header-logo">
-                                <p class="site-title">
-                                    <a href="/" rel="home">Яна &amp; Миша</a>
-                                </p>
-                            </div>
-                            <!-- /logo -->
-                        </div>
-                        <!-- / Brand and toggle -->
-
-                        <!-- Navigation -->
-                        <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a title="About us" href="#wedding-bio">О нас</a></li>
-                                <li><a title="Events" href="#special-events">Свадьба</a></li>
-                                <li><a title="Registration" href="#rsvp">Регистрация</a></li>
-                                <!-- <li><a title="Guests" href="#guests">Гости</a></li> -->
-                                <li><a title="Dress-code" href="">Dress-code</a></li>
-                								<li><a title="Pre-marriageParty" href="#Pre-marriageParty">Мероприятия</a></li>
-                								<li><a title="Gallery" href="#gallery">Галерея</a></li>
-
-							</ul>
-                        </div>
-                        <!-- /navigation -->
-                    </nav>
-                </div>
-                <!-- Main Navigation -->
-
-            </div>
-            <!-- /Navbar Header -->
-        </div>
-        <!-- /Main header -->
-    </header>
-<!-- / Header
-================================================== -->
-
-<!-- Main Content
-================================================== -->
-<div id="content" class="site-content">
+{% block main-content %}
     <div id="primary" class="">
 
         <!-- SECTION: Slideshow -->
         <div class="section-slideshow" id="slideshow">
-             <div class="owl-carousel main-carousel owl-theme">
+            <div class="owl-carousel main-carousel owl-theme">
                 <!-- Slide -->
-                <div class="featured-slide slide bg-cover viewport" style="background-image: url('static/img/home-banner-slide1.jpg');">
+                <div class="featured-slide slide bg-cover viewport"
+                     style="background-image: url('/static/img/home-banner-slide1.jpg');">
                     <div class="slide-inner">
                         <div class="slide-icon active"></div>
                         <h1 class="slide-title active">Яна &amp; Миша</h1>
@@ -163,11 +47,12 @@
                     <div class="col-sm-6">
                         <div class="wedding-bio-item wedding-bio-item-bride">
                             <!-- Picture -->
-                            <figure class="wedding-bio-image"><img src="static/img/about-item-img.jpg" alt="" class="responsive-image"></figure>
+                            <figure class="wedding-bio-image"><img src="/static/img/about-item-img.jpg" alt=""
+                                                                   class="responsive-image"></figure>
                             <!-- / Picture -->
                             <div class="wedding-bio-content">
                                 <!-- name -->
-                                <h2 class="heading wedding-bio-title"><span>Яна</h2>
+                                <h2 class="heading wedding-bio-title">Яна</h2>
                                 <!-- /Name -->
                                 <!-- Description -->
                                 <div class="wedding-bio-text">
@@ -181,9 +66,10 @@
                     <!-- Wedding Bio Item -->
                     <div class="col-sm-6">
                         <div class="wedding-bio-item wedding-bio-item-groom">
-                            <figure class="wedding-bio-image"><img src="static/img/about-item-img2.jpg" alt="" class="responsive-image"></figure>
+                            <figure class="wedding-bio-image"><img src="/static/img/about-item-img2.jpg" alt=""
+                                                                   class="responsive-image"></figure>
                             <div class="wedding-bio-content">
-                                <h2 class="heading wedding-bio-title"><span>Миша</h2>
+                                <h2 class="heading wedding-bio-title">Миша</h2>
                                 <div class="wedding-bio-text">
                                     <p>Люблю Яну.</p>
                                 </div>
@@ -198,52 +84,55 @@
         </div>
         <!-- /SECTION: Wedding Bio -->
 
-        <!-- SECTION: Testimonials -->
-        <div class="section section-testimonials-wrapper" style="background-image: url('static/img/testimonials-bg.jpg');">
-            <div class="container">
-                <!-- Testimonials Carousel -->
-                <div class="section-testimonials text-light">
-                    <div class="owl-carousel testimonial-carousel common-carousel owl-theme">
-                        <!-- Testimonial Item -->
-                        <div class="slide">
-                            <div class="testimonial-item">
-                                <blockquote>
-                                    <!-- TEstimonial Text -->
-                                    <p>Мы просто захотели закатить классную вечеринку, которая для нас двоих не заканчивалась бы никогда.</p>
-                                    <!-- /Testimonial Text -->
-                                    <!-- Testimonial Author -->
-                                    <footer><cite></cite></footer>
-                                    <!-- /Testimonial Author -->
-                                </blockquote>
-                            </div>
-                        </div>
-                        <!-- / Testimonial Item -->
-
-						<!-- Testimonial Item -->
-                        <div class="slide">
-                            <div class="testimonial-item">
-                                <blockquote>
-                                    <!-- TEstimonial Text -->
-                                    <p>Свою жену не ругаю. Её никогда не брошу. Это ведь со мной она стала плохая. А брал-то её хорошей.</p>
-                                    <!-- /Testimonial Text -->
-                                    <!-- Testimonial Author -->
-                                    <footer><cite>В.В. Маяковский</cite></footer>
-                                    <!-- /Testimonial Author -->
-                                </blockquote>
-                            </div>
-                        </div>
-                        <!-- / Testimonial Item -->
-                    </div>
-                </div>
-                <!-- /Testimonials Carousel -->
-            </div>
-        </div>
-        <!-- /SECTION: Testimonials -->
-
+{#        <!-- SECTION: Testimonials -->#}
+{#        <div class="section section-testimonials-wrapper"#}
+{#             style="background-image: url('/static/img/testimonials-bg.jpg');">#}
+{#            <div class="container">#}
+{#                <!-- Testimonials Carousel -->#}
+{#                <div class="section-testimonials text-light">#}
+{#                    <div class="owl-carousel testimonial-carousel common-carousel owl-theme">#}
+{#                        <!-- Testimonial Item -->#}
+{#                        <div class="slide">#}
+{#                            <div class="testimonial-item">#}
+{#                                <blockquote>#}
+{#                                    <!-- TEstimonial Text -->#}
+{#                                    <p>Мы просто захотели закатить классную вечеринку, которая для нас двоих не#}
+{#                                        заканчивалась бы никогда.</p>#}
+{#                                    <!-- /Testimonial Text -->#}
+{#                                    <!-- Testimonial Author -->#}
+{#                                    <footer><cite></cite></footer>#}
+{#                                    <!-- /Testimonial Author -->#}
+{#                                </blockquote>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <!-- / Testimonial Item -->#}
+{##}
+{#                        <!-- Testimonial Item -->#}
+{#                        <div class="slide">#}
+{#                            <div class="testimonial-item">#}
+{#                                <blockquote>#}
+{#                                    <!-- TEstimonial Text -->#}
+{#                                    <p>Свою жену не ругаю. Её никогда не брошу. Это ведь со мной она стала плохая. А#}
+{#                                        брал-то её хорошей.</p>#}
+{#                                    <!-- /Testimonial Text -->#}
+{#                                    <!-- Testimonial Author -->#}
+{#                                    <footer><cite>В.В. Маяковский</cite></footer>#}
+{#                                    <!-- /Testimonial Author -->#}
+{#                                </blockquote>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <!-- / Testimonial Item -->#}
+{#                    </div>#}
+{#                </div>#}
+{#                <!-- /Testimonials Carousel -->#}
+{#            </div>#}
+{#        </div>#}
+{#        <!-- /SECTION: Testimonials -->#}
 
 
         <!-- SECTION: Events -->
-        <div class="section with-dark-bg section-events" id="special-events" style="background-image: url('static/img/special-event-bg.jpg');">
+        <div class="section with-dark-bg section-events" id="special-events"
+             style="background-image: url('/static/img/special-event-bg.jpg');">
             <div class="container">
 
                 <!-- Section Title -->
@@ -269,15 +158,18 @@
                             <div class="events-item-content">
                                 <ul>
                                     <li>
-                                        <span class="events-reminder-item-icon events-reminder-item-icon-time"></span><span class="events-reminder-time-content">17:15</span>
+                                        <span class="events-reminder-item-icon events-reminder-item-icon-time"></span><span
+                                            class="events-reminder-time-content">17:15</span>
                                     </li>
                                     <li>
-                                        <span class="events-reminder-item-icon events-reminder-item-icon-date"></span><span class="events-reminder-date-content">Пятница 4 - Августа 2017</span>
+                                        <span class="events-reminder-item-icon events-reminder-item-icon-date"></span><span
+                                            class="events-reminder-date-content">Пятница 4 - Августа 2017</span>
                                     </li>
                                     <li>
                                         <span class="events-reminder-item-icon events-reminder-item-icon-address"></span>
                                         <span class="events-reminder-date-address">
-                                            <a target="_blank" href="https://yandex.ru/maps/213/moscow/?mode=search&ll=37.644858%2C55.765983&z=15&text=%D0%93%D1%80%D0%B8%D0%B1%D0%BE%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B4%D0%B2%D0%BE%D1%80%D0%B5%D1%86%20%D0%B1%D1%80%D0%B0%D0%BA%D0%BE%D1%81%D0%BE%D1%87%D0%B5%D1%82%D0%B0%D0%BD%D0%B8%D1%8F%20%E2%84%96%201&sll=37.644423%2C55.767134&sspn=0.087719%2C0.031936&ol=psearch&oid=maps%3A1542474154">
+                                            <a target="_blank"
+                                               href="https://yandex.ru/maps/213/moscow/?mode=search&ll=37.644858%2C55.765983&z=15&text=%D0%93%D1%80%D0%B8%D0%B1%D0%BE%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B4%D0%B2%D0%BE%D1%80%D0%B5%D1%86%20%D0%B1%D1%80%D0%B0%D0%BA%D0%BE%D1%81%D0%BE%D1%87%D0%B5%D1%82%D0%B0%D0%BD%D0%B8%D1%8F%20%E2%84%96%201&sll=37.644423%2C55.767134&sspn=0.087719%2C0.031936&ol=psearch&oid=maps%3A1542474154">
                                                 Дворец бракосочетания №1
                                             </a>
                                         </span>
@@ -298,13 +190,16 @@
                             <div class="events-item-content">
                                 <ul>
                                     <li>
-                                        <span class="events-reminder-item-icon events-reminder-item-icon-time"></span><span class="events-reminder-time-content">14:00</span>
+                                        <span class="events-reminder-item-icon events-reminder-item-icon-time"></span><span
+                                            class="events-reminder-time-content">14:00</span>
                                     </li>
                                     <li>
-                                        <span class="events-reminder-item-icon events-reminder-item-icon-date"></span><span class="events-reminder-date-content">Суббота 5 - Августа 2017</span>
+                                        <span class="events-reminder-item-icon events-reminder-item-icon-date"></span><span
+                                            class="events-reminder-date-content">Суббота 5 - Августа 2017</span>
                                     </li>
                                     <li>
-                                        <span class="events-reminder-item-icon events-reminder-item-icon-address"></span><span class="events-reminder-date-address">Шато-отель "Немчиновка-Парк"</span>
+                                        <span class="events-reminder-item-icon events-reminder-item-icon-address"></span><span
+                                            class="events-reminder-date-address">Шато-отель "Немчиновка-Парк"</span>
                                     </li>
                                 </ul>
                             </div>
@@ -321,8 +216,9 @@
         </div>
         <!-- / SECTION: Events -->
 
-         <!-- RSVP -->
-        <div class="section section-contact bg-cover with-dark-bg" id="rsvp" style="background-image: url(static/img/contact-bg.jpg);">
+        <!-- RSVP -->
+        <div class="section section-contact bg-cover with-dark-bg" id="rsvp"
+             style="background-image: url(/static/img/contact-bg.jpg);">
             <div class="container">
 
                 <!-- Section Title -->
@@ -340,7 +236,7 @@
                 <form class="form row rsvp" id="contactForm">
                     <!-- Form Group -->
                     <div class="col-sm-6 form-group">
-                       <label>Имя</label>
+                        <label>Имя</label>
                         <input type="text" class="form-control required" id="name" name="name" required/>
                         <!-- Form Group -->
                     </div>
@@ -348,7 +244,7 @@
 
                     <!-- Form Group -->
                     <div class="col-sm-6 form-group">
-                       <label>Фамилия</label>
+                        <label>Фамилия</label>
                         <input type="text" class="form-control required" id="surname" name="surname" required/>
                         <!-- Form Group -->
                     </div>
@@ -357,20 +253,20 @@
                     <!-- Form Group -->
                     <div class="col-sm-6 form-group">
                         <label>E-mail</label>
-                        <input type="email" class="form-control required" id="email" name="email" required />
+                        <input type="email" class="form-control required" id="email" name="email" required/>
                     </div>
                     <!-- Form Group -->
 
                     <!-- Form Group -->
                     <div class="col-sm-6 form-group">
-                       <label>На какие мероприятия хочешь прийти?</label>
+                        <label>На какие мероприятия хочешь прийти?</label>
                         <input type="text" class="form-control required" name="events" id="events" required/>
                     </div>
                     <!-- Form Group -->
 
                     <!-- Form Group -->
                     <div class="col-sm-12 form-group">
-                       <label>Можно написать какие-то пожелания или просто что-нибудь приятное</label>
+                        <label>Можно написать какие-то пожелания или просто что-нибудь приятное</label>
                         <textarea class="form-control required" id="message" name="message" required></textarea>
                     </div>
                     <!-- Form Group -->
@@ -386,343 +282,145 @@
         </div>
         <!-- /RSVP -->
 
-        <!-- guest List -->
-        <!-- <div class="section section-guest-list" id="guests"> -->
-
-            <!-- <div class="container"> -->
-
-                <!-- Section Title -->
-                <!-- <div class="title-section-wrapper"> -->
-                    <!-- Title -->
-                    <!-- <h2 class="title-section">Наши гости</h2> -->
-                    <!-- /title -->
-                    <!-- Text -->
-                    <!-- <p class="text-section">Здесь вы можете познакомиться со всеми нашими гостями</p> -->
-                    <!-- /text -->
-                <!-- </div> -->
-                <!-- /Section Title -->
-
-                <!-- guest list -->
-
-                <!-- /guest list -->
-
-            <!-- </div> -->
-
-        <!-- </div> -->
-        <!-- /guest List -->
-
-        <!-- Dress-code -->
-        <div class="section section-blog with-bg" id="blog">
+        <!-- Pre-marriageParty -->
+        <div class="section with-dark-bg section-events" id="Pre-marriageParty"
+             style="background-image: url('/static/img/special-event-bg.jpg');">
             <div class="container">
 
                 <!-- Section Title -->
                 <div class="title-section-wrapper">
                     <!-- Title -->
-                    <h2 class="title-section">Dress-code</h2>
+                    <h2 class="title-section">Мероприятия</h2>
                     <!-- /title -->
-                </div>
-                <!-- /Section Title -->
-
-                <!-- Blogroll  -->
-                <div class="owl-carousel-wrapper blogroll-carousel-wrapper">
-                    <div class="owl-carousel blogroll-carousel owl-theme owl-loaded">
-                        <!-- item -->
-                        <div class="blog-item">
-                            <a href="single.html">
-                                <figure class="blog-item-img blog-item-img-cover" style=" background-image: url(static/img/img1-3.jpg)"></figure>
-                            </a>
-                            <div class="blog-content">
-                                <article class="post">
-                                    <h3 class="heading">Основные цвета</h3>
-                                    <p>Золото в сочетании с нежными оттенками розово-фиолетовой палитры</p>
-                                    <a href="single.html" class="primary-btn">Подробнее</a>
-                                </article>
-                            </div>
-                        </div>
-                        <!-- /item -->
-
-		                <!-- item -->
-                        <div class="blog-item">
-                            <a href="single.html">
-                                <figure class="blog-item-img blog-item-img-cover" style=" background-image: url(static/img/img1-3.jpg)"></figure>
-                            </a>
-                            <div class="blog-content">
-                                <article class="post">
-                                    <h3 class="heading">Примеры нарядов для женщин</h3>
-                                    <p>Нежность и цветы.</p>
-                                    <a href="single.html" class="primary-btn">Подробнее</a>
-                                </article>
-                            </div>
-                        </div>
-                        <!-- /item -->
-
-                        <!-- item -->
-                        <div class="blog-item">
-                            <a href="single.html">
-                                <figure class="blog-item-img blog-item-img-cover" style=" background-image: url(static/img/img1-3.jpg)"></figure>
-                            </a>
-                            <div class="blog-content">
-                                <article class="post">
-                                    <h3 class="heading">Примеры нарядов для мужчин</h3>
-                                    <p>Галстук, бабочка или рубашка.</p>
-                                    <a href="single.html" class="primary-btn">Подробнее</a>
-                                </article>
-                            </div>
-                        </div>
-                        <!-- /item -->
-
-
-                    </div>
-                </div>
-                <!-- /Blogroll -->
-
-            </div>
-        </div>
-        <!-- /Blog -->
-
- <!-- Pre-marriageParty -->
-          <div class="section with-dark-bg section-events" id="Pre-marriageParty" style="background-image: url('static/img/special-event-bg.jpg');">
-            <div class="container">
-
-            <!-- Section Title -->
-            <div class="title-section-wrapper">
-                <!-- Title -->
-                <h2 class="title-section">Мероприятия</h2>
-                <!-- /title -->
-                <!-- row -->
-                <div class="row">
-                    <!-- col -->
-                    <div class="col-sm-6">
-                        <!-- Event Item -->
-                        <div class="events-reminder-item">
-                            <header>
-                                <h3 class="events-item-heading">Мальчишник</h3>
-                            </header>
-                            <div class="events-item-content">
-                                <ul>
-                                    <li>
-                                        <span class="events-reminder-item-icon events-reminder-item-icon-time"></span><span class="events-reminder-time-content">20:00</span>
-                                    </li>
-                                    <li>
-                                        <span class="events-reminder-item-icon events-reminder-item-icon-date"></span><span class="events-reminder-date-content">Пятница 28 - Июля 2017</span>
-                                    </li>
-                                    <li>
-                                        <span class="events-reminder-item-icon events-reminder-item-icon-address"></span><span class="events-reminder-date-address">Бар</span>
-                                    </li>
-                                    <li>
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-sm-6">
+                            <!-- Event Item -->
+                            <div class="events-reminder-item">
+                                <header>
+                                    <h3 class="events-item-heading">Мальчишник</h3>
+                                </header>
+                                <div class="events-item-content">
+                                    <ul>
+                                        <li>
+                                            <span class="events-reminder-item-icon events-reminder-item-icon-time"></span><span
+                                                class="events-reminder-time-content">20:00</span>
+                                        </li>
+                                        <li>
+                                            <span class="events-reminder-item-icon events-reminder-item-icon-date"></span><span
+                                                class="events-reminder-date-content">Пятница 28 - Июля 2017</span>
+                                        </li>
+                                        <li>
+                                            <span class="events-reminder-item-icon events-reminder-item-icon-address"></span><span
+                                                class="events-reminder-date-address">Бар</span>
+                                        </li>
+                                        <li>
                                       <span class="events-item-icon">
                                         <i class="fa fa-user fa-2" aria-hidden="true"></i>
                                       </span>
-                                      <span class="events-reminder-time-content">+7(903)123-45-67 (Сергей)</span>
-                                    </li>
-                                </ul>
+                                            <span class="events-reminder-time-content">+7(903)123-45-67 (Сергей)</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
+                            <!-- /Event Item -->
                         </div>
-                        <!-- /Event Item -->
-                    </div>
-                    <!-- /col -->
-                    <!-- col -->
-                    <div class="col-sm-6">
-                        <!-- Event Item -->
-                        <div class="events-reminder-item">
-                            <header>
-                                <h3 class="events-item-heading">Девичник</h3>
-                            </header>
-                            <div class="events-item-content">
-                                <ul>
-                                    <li>
-                                        <span class="events-reminder-item-icon events-reminder-item-icon-time"></span><span class="events-reminder-time-content">20:00</span>
-                                    </li>
-                                    <li>
-                                        <span class="events-reminder-item-icon events-reminder-item-icon-date"></span><span class="events-reminder-date-content">Пятница 28 - Июля 2017</span>
-                                    </li>
-                                    <li>
-                                        <span class="events-reminder-item-icon events-reminder-item-icon-address"></span><span class="events-reminder-date-address">Санкт-Петербург</span>
-                                    </li>
-									                  <li>
+                        <!-- /col -->
+                        <!-- col -->
+                        <div class="col-sm-6">
+                            <!-- Event Item -->
+                            <div class="events-reminder-item">
+                                <header>
+                                    <h3 class="events-item-heading">Девичник</h3>
+                                </header>
+                                <div class="events-item-content">
+                                    <ul>
+                                        <li>
+                                            <span class="events-reminder-item-icon events-reminder-item-icon-time"></span><span
+                                                class="events-reminder-time-content">20:00</span>
+                                        </li>
+                                        <li>
+                                            <span class="events-reminder-item-icon events-reminder-item-icon-date"></span><span
+                                                class="events-reminder-date-content">Пятница 28 - Июля 2017</span>
+                                        </li>
+                                        <li>
+                                            <span class="events-reminder-item-icon events-reminder-item-icon-address"></span><span
+                                                class="events-reminder-date-address">Санкт-Петербург</span>
+                                        </li>
+                                        <li>
                                         <span class="events-item-icon">
                                           <i class="fa fa-user fa-2" aria-hidden="true"></i>
                                         </span>
-                                        <span class="events-reminder-time-content">Валерия 89012345678</span>
-                                    </li>
-                                </ul>
+                                            <span class="events-reminder-time-content">Валерия 89012345678</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
+                            <!-- /Event Item -->
                         </div>
-                        <!-- /Event Item -->
+                        <!-- /col -->
                     </div>
-                    <!-- /col -->
+                    <!-- /row -->
                 </div>
-                <!-- /row -->
-            </div>
-            <!-- /Section Title -->
+                <!-- /Section Title -->
 
-        </div>
-        <!-- /Pre-marriageParty -->
+            </div>
+            <!-- /Pre-marriageParty -->
 
-<!-- Gallery -->
-        <div class="section section-gallery" id="gallery">
+            <!-- Gallery -->
+            <div class="section section-gallery" id="gallery">
 
-            <!-- Section Title -->
-            <div class="title-section-wrapper">
-                <!-- Title -->
-                <h2 class="title-section">Галерея</h2>
-                <!-- /title -->
-                <!-- Text -->
-                <p class="text-section">Здесь будут  фотографии и видео с нашего торжества, чтобы каждый мог окунуться в атмосферу любви и красоты ещё раз.</p>
-                <!-- /text -->
-            </div>
-            <!-- /Section Title -->
+                <!-- Section Title -->
+                <div class="title-section-wrapper">
+                    <!-- Title -->
+                    <h2 class="title-section">Галерея</h2>
+                    <!-- /title -->
+                    <!-- Text -->
+                    <p class="text-section">Здесь будут фотографии и видео с нашего торжества, чтобы каждый мог
+                        окунуться в атмосферу любви и красоты ещё раз.</p>
+                    <!-- /text -->
+                </div>
+                <!-- /Section Title -->
 
-            <!-- Gallery Images -->
-            <div class="gallery-images row">
-            <div class="col-lg-3 col-md-4 col-sm-6 no-space">
-                <div class="bearr-gallery-item"><a href="static/img/gallery-img2.jpg"><img src="static/img/gallery-img2.jpg" alt="Gallery Image"></a></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 no-space">
-                <div class="bearr-gallery-item"><a href="static/img/gallery-img5.jpg"><img src="static/img/gallery-img5.jpg" alt="Gallery Image"></a></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 no-space">
-                <div class="bearr-gallery-item"><a href="static/img/gallery-img8.jpg"><img src="static/img/gallery-img8.jpg" alt="Gallery Image"></a></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 no-space">
-                <div class="bearr-gallery-item"><a href="static/img/gallery-img7.jpg"><img src="static/img/gallery-img7.jpg" alt="Gallery Image"></a></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 no-space">
-                <div class="bearr-gallery-item"><a href="static/img/gallery-img1.jpg"><img src="static/img/gallery-img1.jpg" alt="Gallery Image"></a></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 no-space">
-                <div class="bearr-gallery-item"><a href="static/img/gallery-img7.jpg"><img src="static/img/gallery-img7.jpg" alt="Gallery Image"></a></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 no-space">
-                <div class="bearr-gallery-item"><a href="static/img/gallery-img2.jpg"><img src="static/img/gallery-img2.jpg" alt="Gallery Image"></a></div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 no-space">
-                <div class="bearr-gallery-item"><a href="static/img/gallery-img8.jpg"><img src="static/img/gallery-img8.jpg" alt="Gallery Image"></a></div>
-            </div>
-        </div>
-            <!-- /Gallery Images -->
-        </div>
-        <!-- /Gallery -->
-
-
-
-    </div>
-</div>
-<!-- /Main Content
-================================================== -->
-
-<!-- Footer
-================================================== -->
-<footer id="colophon" class="site-footer">
-    <!-- footer bottom -->
-    <div class="footer-bottom">
-        <div class="container">
-            <!-- row -->
-            <div class="row">
-                <!-- col -->
-                <div class="col-sm-8">
-                    <!-- Site Info -->
-                    <div class="site-quote">
-                        <p>“Ideas are the beginning points of all fortunes” - <small>Napoleon Hill</small></p>
+                <!-- Gallery Images -->
+                <div class="gallery-images row">
+                    <div class="col-lg-3 col-md-4 col-sm-6 no-space">
+                        <div class="bearr-gallery-item"><a href="static/img/gallery-img2.jpg"><img
+                                src="static/img/gallery-img2.jpg" alt="Gallery Image"></a></div>
                     </div>
-                    <!-- /Site info -->
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-sm-4">
-                    <!-- social icons -->
-                    <div class="social-icons footer-social-icons">
-                        <ul class="social-icons-list text-right">
-                            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
+                    <div class="col-lg-3 col-md-4 col-sm-6 no-space">
+                        <div class="bearr-gallery-item"><a href="static/img/gallery-img5.jpg"><img
+                                src="static/img/gallery-img5.jpg" alt="Gallery Image"></a></div>
                     </div>
-                    <!-- /social icons -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 no-space">
+                        <div class="bearr-gallery-item"><a href="static/img/gallery-img8.jpg"><img
+                                src="static/img/gallery-img8.jpg" alt="Gallery Image"></a></div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 no-space">
+                        <div class="bearr-gallery-item"><a href="static/img/gallery-img7.jpg"><img
+                                src="static/img/gallery-img7.jpg" alt="Gallery Image"></a></div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 no-space">
+                        <div class="bearr-gallery-item"><a href="static/img/gallery-img1.jpg"><img
+                                src="static/img/gallery-img1.jpg" alt="Gallery Image"></a></div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 no-space">
+                        <div class="bearr-gallery-item"><a href="static/img/gallery-img7.jpg"><img
+                                src="static/img/gallery-img7.jpg" alt="Gallery Image"></a></div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 no-space">
+                        <div class="bearr-gallery-item"><a href="static/img/gallery-img2.jpg"><img
+                                src="static/img/gallery-img2.jpg" alt="Gallery Image"></a></div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 no-space">
+                        <div class="bearr-gallery-item"><a href="static/img/gallery-img8.jpg"><img
+                                src="static/img/gallery-img8.jpg" alt="Gallery Image"></a></div>
+                    </div>
                 </div>
-                <!-- /col -->
+                <!-- /Gallery Images -->
             </div>
-            <!-- /row -->
+            <!-- /Gallery -->
         </div>
     </div>
-    <!-- /footer bottom -->
-</footer>
-<!-- /Footer
-================================================== -->
-
-<!-- Back to Top Button -->
-<div id="back-to-top" class="back-to-top back-to-top-hide"><i class="fa fa-angle-up"></i></div>
-<!-- /Back to Top Button -->
-
-<!-- Contact Form - Ajax Messages
-========================================================= -->
-<!-- Form Sucess -->
-<div class="form-result modal-wrap" id="contactSuccess">
-  <div class="modal-bg"></div>
-  <div class="modal-content">
-    <h4 class="modal-title"><i class="fa fa-check-circle"></i> Success!</h4>
-    <p>Your message has been sent to us.</p>
-  </div>
-</div>
-<!-- /Form Sucess -->
-<!-- form-error -->
-<div class="form-result modal-wrap" id="contactError">
-  <div class="modal-bg"></div>
-  <div class="modal-content">
-    <h4 class="modal-title"><i class="fa fa-times"></i> Error</h4>
-    <p>There was an error sending your message.</p>
-  </div>
-</div>
-<!-- /form-error -->
-<!-- form-sending -->
-<div class="form-result modal-wrap" id="contactWait">
-  <div class="modal-bg"></div>
-  <div class="modal-content">
-    <div class="modal-loader"></div>
-    <p>Sending Message, please wait...</p>
-  </div>
-</div>
-<!-- /form-sending -->
-<!-- / Contact Form - Ajax Messages
-========================================================= -->
-
-
-<!-- >> JS
-============================================================================== -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="static/vendor/jquery-1.12.4.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="static/vendor/validate.js"></script>
-<!-- CountDown -->
-<script src="static/vendor/jquery.countdown.min.js"></script>
-<!-- ImagesLoaded -->
-<script src="static/vendor/imagesloaded.pkgd.min.js"></script>
-<!-- Waypoints-->
-<script src="static/vendor/waypoints.min.js"></script>
-<!-- /Waypoints-->
-<!-- Owl Caroulsel -->
-<script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
-<!-- Cross-browser -->
-<script src="static/vendor/cross-browser.js"></script>
-<!-- Simple Lightbox -->
-<script src="static/vendor/simplelightbox/dist/simple-lightbox.min.js"></script>
-<!-- Match Height Plugin to add height on elements -->
-<script src="static/vendor/jquery.matchHeight-min.js"></script>
-<!-- Main Scripts -->
-<script src="static/js/main.js"></script>
-
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="static/vendor/html5shiv.js"></script>
-<script src="static/vendor/respond.min.js"></script>
-<![endif]-->
-<!-- >> /JS
-============================================================================= -->
-</body>
-
-</html>
+{% endblock %}
