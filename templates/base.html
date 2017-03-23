@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Amore: HTML Wedding Template by ThemeBear</title>
+    <title>Яна & Миша</title>
 
     <!-- Favicons
 ================================================== -->
@@ -92,13 +92,12 @@
                         <!-- Navigation -->
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a title="About us" href="#wedding-bio">О нас</a></li>
-                                <li><a title="Events" href="#special-events">Свадьба</a></li>
-                                <li><a title="Registration" href="#rsvp">Регистрация</a></li>
-                                <!-- <li><a title="Guests" href="#guests">Гости</a></li> -->
+                                <li><a title="About us" href="{% url 'index' %}#wedding-bio">О нас</a></li>
+                                <li><a title="Events" href="{% url 'index' %}#special-events">Свадьба</a></li>
+                                <li><a title="Registration" href="{% url 'index' %}#rsvp">Регистрация</a></li>
                                 <li><a title="Dress-code" href="{% url 'dress-code' %}">Dress-code</a></li>
-                                <li><a title="Pre-marriageParty" href="#Pre-marriageParty">Мероприятия</a></li>
-                				<li><a title="Gallery" href="#gallery">Галерея</a></li>
+                                <li><a title="Pre-marriageParty" href="{% url 'index' %}#Pre-marriageParty">Мероприятия</a></li>
+                				<li><a title="Gallery" href="{% url 'index' %}#gallery">Галерея</a></li>
 
 							</ul>
                         </div>
