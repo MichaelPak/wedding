@@ -17,12 +17,12 @@
     }
 
     $('.loading-wrapper').css({'visibility': 'visible'}).animate({opacity: '1'}, 600);
-       
+
     //Begin - Window Load
-    $(window).on("load", function () {    
+    $(window).on("load", function () {
 
         //loader and Intro Animations
-        $('#page-loader').delay(1000).fadeOut(400, function(){});    
+        $('#page-loader').delay(1000).fadeOut(400, function(){});
 
         // Calling functions here
         adjustViewport();
@@ -36,7 +36,7 @@
     });
 
     //Begin - Document Ready
-    $(document).on("ready", function () {    
+    $(document).on("ready", function () {
 
         //WAYPOINTS
         $('#content').waypoint(function (direction) {
@@ -51,11 +51,11 @@
             offset: '-20px'
         });
 
-        //Bootstrap menu on hover 
+        //Bootstrap menu on hover
         $('.dropdown').on('mouseenter', function () {
             $(this).addClass('open');
             return false;
-        }); 
+        });
 
         $('.dropdown').on('mouseleave', function () {
             $(this).removeClass('open');
@@ -68,7 +68,7 @@
                 scrollTop: 0
             }, 700);
             return false;
-        });        
+        });
 
         //Anchor Smooth Scroll
         $('a[href*="#"]:not([href="#"])').on('click', function ()  {
@@ -84,7 +84,7 @@
             }
         });
 
-        // Mobile Menu Js      
+        // Mobile Menu Js
         $("#MobileMenu").on("click", function () {
             var HeaderHeight = $("#header").outerHeight();
             $(this).toggleClass("menu-clicked");
@@ -102,22 +102,22 @@
             $('.slide-icon').addClass('active');
             $('.slide-text').addClass('active');
             $('.featured-slide .primary-btn').addClass('active');
-        }); 
-        
+        });
+
         mainSlider.owlCarousel({
             items: 1,
             nav: true,
             loop: false
         });
 
-        mainSlider.on('changed.owl.carousel', function(e){          
+        mainSlider.on('changed.owl.carousel', function(e){
             $('.slide-title').removeClass('active');
             $('.slide-icon').removeClass('active');
             $('.slide-text').removeClass('active');
-            $('.featured-slide .primary-btn').removeClass('active');    
+            $('.featured-slide .primary-btn').removeClass('active');
             return false;
         });
-         
+
 
         mainSlider.on('translated.owl.carousel', function(e){
             $('.slide-title').addClass('active');
@@ -125,28 +125,28 @@
             $('.slide-text').addClass('active');
             $('.featured-slide .primary-btn').addClass('active');
             return false;
-        });    
+        });
 
         //=====>  Countdown (Edit this with your own date)  <====
-        $("#bearr-countdown-item").countdown( "2017/02/22 15:10:56" , function (event) {
+        $("#bearr-countdown-item").countdown( "2017/08/05 14:00:00" , function (event) {
             var $this = $(this).html(event.strftime('' + '<div class="countdown-col"><span class="countdown-time"> %-D </span> <span class="countdown-type"> Days </span></div> ' + '<div class="countdown-col"><span class="countdown-time"> %H </span> <span class="countdown-type">Hours </span></div>' + '<div class="countdown-col"><span class="countdown-time"> %M </span> <span class="countdown-type">Minutes </span></div>' + '<div class="countdown-col"><span class="countdown-time"> %S </span> <span class="countdown-type">Seconds </span></div>'));
         });
 
         //Testimonials
          $(".testimonial-carousel").owlCarousel({
             items: 1,
-            nav: false,         
+            nav: false,
         });
 
         // Gallery Fancybox
-        $(".bearr-gallery-item a").simpleLightbox();   
+        $(".bearr-gallery-item a").simpleLightbox();
 
         //Git List
         $(".clients-carousel").owlCarousel({
             items: 3,
             nav: false,
             margin: 20
-        });  
+        });
 
         //Blogroll
         $(".blogroll-carousel").owlCarousel({
@@ -161,7 +161,7 @@
                    items: 3,
                 }
             }
-        });    
+        });
 
         //Post Format: Gallery
         $('.gallery-featured-carousel').owlCarousel({
@@ -174,8 +174,8 @@
                 //remove class active
                 this.$owlItems.removeClass('active');
                 //add class active
-                this.$owlItems.eq(this.currentItem).addClass('active');    
-            }       
+                this.$owlItems.eq(this.currentItem).addClass('active');
+            }
         })
 
         //Contact Form
@@ -197,10 +197,10 @@
                 if (data.response == "success") {
                   $('#contactWait').hide();
                   $("#contactSuccess").fadeIn(300).addClass('modal-show');
-                  //$("#contactError").addClass("hidden");  
+                  //$("#contactError").addClass("hidden");
                   //$("#contactForm #name, #contactForm #email, #contactForm #events, #contactForm #guests, #contactForm #message")
                     //.val("")
-                    //.blur();         
+                    //.blur();
                 } else {
                   $('#contactWait').hide();
                   $("#contactError").fadeIn(300).addClass('modal-show');
@@ -218,7 +218,7 @@
         var modalWrap = $('.modal-wrap');
         modalWrap.on('click', function () {
           modalWrap.fadeOut(300);
-        }); 
+        });
 
         //Modal for Forms
         function hideModal() {
@@ -228,11 +228,11 @@
 
         modalWrap.on('click', function () {
           hideModal();
-        });   
+        });
 
         modalWrap.on('click', function () {
           hideModal();
-        }); 
+        });
         //End - Document Ready
     });
 
