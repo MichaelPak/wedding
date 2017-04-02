@@ -1,8 +1,8 @@
 .color1 {
-  color: rgba(153, 102, 141, 0.83);
+  color: #cb9fb8;
 }
 .color2 {
-  color: #99668d;
+  color: #cb9fb8;
 }
 .color3 {
   color: #a1b1bc;
@@ -19,6 +19,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Mozart';
+  src: url('../fonts/Mozart.woff2'), url('../fonts/Mozart.woff'), url(../fonts/Mozart.svg);
+  font-weight: normal;
+  font-style: normal;
+}
 .font1 {
   font-family: 'Lato', sans-serif;
 }
@@ -27,7 +33,7 @@
   font-weight: 500;
 }
 .font3 {
-  font-family: 'Nickainley', Arial, sans-serif;
+  font-family: 'Mozart', Arial, sans-serif;
   font-weight: normal;
 }
 .anima1 {

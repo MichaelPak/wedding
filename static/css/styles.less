@@ -271,7 +271,7 @@ a {
     padding-top: 40px;
     padding-bottom: 40px;
     &.with-bg {
-        background-color: @color4;
+        background-color: @color7;
         background-position: center center;
         background-size: cover;
     }
@@ -327,6 +327,21 @@ a {
     margin-left: auto;
     opacity: 0.9;
     font-size: 15px;
+    line-height: 1.6;
+    @media @full-hd {
+        margin-bottom: 80px;
+    }
+}
+
+.text-section2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: normal;
+    max-width: 870px;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0.9;
+    font-size: 20px;
     line-height: 1.6;
     @media @full-hd {
         margin-bottom: 80px;
@@ -1025,7 +1040,7 @@ a {
     .slide-title {
         .font3;
         font-size: 60px;
-        color: @negative-color;
+        color: @color2;
         position: relative;
         margin-bottom: 30px;
         @media @tablet {
@@ -1199,7 +1214,7 @@ a {
     }
 
     .wedding-bio-item {
-        background-color: #eeeeee;
+        background-color: rgba(256, 256, 256, 0.5);
         padding: 15px;
         margin: 30px 0;
         text-align: center;
@@ -1549,7 +1564,9 @@ a {
 
 .events-reminder-date-address a {
   color: #fff;
-  text-decoration: underline;
+    :hover {
+        text-decoration: underline;
+    }
 }
 
 
@@ -1935,7 +1952,7 @@ a {
         font-size: 15px;
     }
     textarea.form-control {
-        min-height: 200px;
+        min-height: 70px;
         resize: none;
         @media @tablet {
             min-height: 270px;
@@ -1989,7 +2006,7 @@ a {
         }
     }
     textarea.form-control {
-        min-height: 200px;
+        min-height: 70px;
         padding: 20px;
         width: 100% !important;
     }
