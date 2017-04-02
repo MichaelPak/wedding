@@ -3088,7 +3088,7 @@ span.not-valid-tip {
   .post-block .post-featured-image,
   .post-block .post-featured-image > a,
   .post-block .post-featured-image img {
-    height: 100%;
+    height: 80%;
     display: block;
   }
 }
