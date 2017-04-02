@@ -12,7 +12,7 @@
 
     function AdjustingBannerSpacing() {
         var HeaderHeight = $("#header").outerHeight();
-        var BannerPadding = windowHeight - HeaderHeight
+        var BannerPadding = windowHeight - HeaderHeight;
         $(".main-carousel .slide-inner").css("padding-top", HeaderHeight);
     }
 
@@ -129,7 +129,12 @@
 
         //=====>  Countdown (Edit this with your own date)  <====
         $("#bearr-countdown-item").countdown( "2017/08/05 14:00:00" , function (event) {
-            var $this = $(this).html(event.strftime('' + '<div class="countdown-col"><span class="countdown-time"> %-D </span> <span class="countdown-type"> Days </span></div> ' + '<div class="countdown-col"><span class="countdown-time"> %H </span> <span class="countdown-type">Hours </span></div>' + '<div class="countdown-col"><span class="countdown-time"> %M </span> <span class="countdown-type">Minutes </span></div>' + '<div class="countdown-col"><span class="countdown-time"> %S </span> <span class="countdown-type">Seconds </span></div>'));
+            var $this = $(this).html(event.strftime(
+                '' +
+                '<div class="countdown-col"><span class="countdown-time"> %-D </span> <span class="countdown-type"> Дней </span></div> ' +
+                '<div class="countdown-col"><span class="countdown-time"> %H </span> <span class="countdown-type"> Часов </span></div>' +
+                '<div class="countdown-col"><span class="countdown-time"> %M </span> <span class="countdown-type"> Минут </span></div>'));
+            // + '<div class="countdown-col"><span class="countdown-time"> %S </span> <span class="countdown-type">Seconds </span></div>'));
         });
 
         //Testimonials
@@ -155,17 +160,16 @@
             margin: 20,
             responsive : {
                 768 : {
-                   items: 2,
+                   items: 2
                 },
                 1024 : {
-                   items: 3,
+                   items: 3
                 }
             }
         });
 
         //Post Format: Gallery
         $('.gallery-featured-carousel').owlCarousel({
-            loop:true,
             loop:true,
             margin:0,
             nav:true,
