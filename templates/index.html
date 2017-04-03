@@ -238,11 +238,12 @@
                 <!-- /Section Title -->
 
                 <!-- Form -->
-                <form class="form row rsvp" id="contactForm">
+                <form class="form row rsvp" method="POST" action="{% url 'index' %}">
+                    {% csrf_token %}
                     <!-- Form Group -->
                     <div class="col-sm-6 form-group">
                         <label>Имя</label>
-                        <input type="text" class="form-control required" id="name" name="name"/>
+                        <input type="text" class="form-control required" id="name" name="firstname"/>
                         <!-- Form Group -->
                     </div>
                     <!-- Form Group -->
@@ -250,7 +251,7 @@
                     <!-- Form Group -->
                     <div class="col-sm-6 form-group">
                         <label>Фамилия</label>
-                        <input type="text" class="form-control required" id="surname" name="surname"/>
+                        <input type="text" class="form-control required" id="surname" name="lastname"/>
                         <!-- Form Group -->
                     </div>
                     <!-- Form Group -->
@@ -258,7 +259,7 @@
                     <!-- Form Group -->
                     <div class="col-sm-12 form-group">
                         <label>Можно написать какие-то пожелания или просто что-нибудь приятное</label>
-                        <textarea class="form-control required" rows="3" id="message" name="message"></textarea>
+                        <textarea class="form-control required" rows="3" id="message" name="comment"></textarea>
                     </div>
                     <!-- Form Group -->
 
