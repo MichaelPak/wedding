@@ -129,12 +129,13 @@
 
         //=====>  Countdown (Edit this with your own date)  <====
         $("#bearr-countdown-item")
-            .countdown('2017/08/05 14:00:00')
-            .on('update.countdown', function(event) {
-                $(this).html(event.strftime(`<div class="countdown-col"><span class="countdown-time"> %-D </span> <span class="countdown-type"> Дней </span></div>
-            <div class="countdown-col"><span class="countdown-time"> %H </span> <span class="countdown-type"> Часов </span></div>
-            <div class="countdown-col"><span class="countdown-time"> %M </span> <span class="countdown-type"> Минут </span></div>`))
-            });
+        .countdown({
+            until: new Date('2017/08/05 14:00:00'),
+            format: 'dHM',
+            layout: `<div class="countdown-col"><span class="countdown-time"> {dn} </span> <span class="countdown-type"> Дней </span></div>
+             <div class="countdown-col"><span class="countdown-time"> {hn} </span> <span class="countdown-type"> Часов </span></div>
+             <div class="countdown-col"><span class="countdown-time"> {mn} </span> <span class="countdown-type"> Минут </span></div>`
+        })
         //Testimonials
          $(".testimonial-carousel").owlCarousel({
             items: 1,
