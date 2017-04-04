@@ -175,7 +175,6 @@ a {
             -moz-transform: translate(0, 0);
         }
         &:hover {
-            .color1;
             &:before {
                 transform: translate(0, -100%);
                 -webkit-transform: translate(0, -100%);
@@ -274,6 +273,19 @@ a {
         background-color: @color7;
         background-position: center center;
         background-size: cover;
+        position: relative;
+        &#rsvp {
+            color: white;
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.3);
+            }
+        }
     }
     &.with-dark-bg {
         .title-section {
@@ -335,7 +347,7 @@ a {
 
 .text-section2 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: normal;
     max-width: 870px;
     margin-right: auto;
@@ -344,7 +356,7 @@ a {
     font-size: 20px;
     line-height: 1.6;
     @media @full-hd {
-        margin-bottom: 80px;
+        margin-bottom: 50px;
     }
 }
 
@@ -641,10 +653,7 @@ a {
     background-color: @header-bg;
     .anima(0.5s);
     .header-logo {
-        width: 170px;
-        @media @tablet {
-            margin-top: 28px;
-        }
+        margin-top: 0;
         @media @laptop {
             width: inherit;
             margin-top: 0;
@@ -666,6 +675,11 @@ a {
           }
           a {
             color: @negative-color;
+            display: inline-block;
+            white-space: nowrap;
+            &:hover {
+                text-decoration: none;
+            }
           }
         }
         .site-description {
@@ -720,7 +734,11 @@ a {
 
 .navbar-collapse {
     border-top: 0;
-    margin-top: 20px;
+    margin-left: auto;
+    width: 100%;
+    @media @tablet {
+        width: auto;
+    }
     @media @laptop {
         margin-top: 0;
     }
@@ -731,12 +749,26 @@ a {
     border: 0;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    .navbar-header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        float: none;
+        width: 100%;
+        @media @tablet {
+            width: auto;
+        }
+    }
     .navbar-toggle {
         background-color: transparent ;
         color: @negative-color;
         position: relative;
-        top: 5px;
         margin-right: 0;
+        margin-left: auto;
+        order: 1;
         .icon-bar {
             background-color: @negative-color;
         }
@@ -778,7 +810,7 @@ a {
                     color: @negative-color;
                     border-color: @color1;
                 }
-                @media @laptop {
+                @media (min-width: 1080px) {
                     margin-left: 50px;
                     font-size: 14px;
                     line-height: 20px;
@@ -794,7 +826,7 @@ a {
                 }
             }
             &:before {
-                @media @laptop {
+                @media (min-width: 1080px) {
                     content: "";
                     background: url(../img/nav-heart.png) no-repeat;
                     position: absolute;
@@ -1021,10 +1053,10 @@ a {
     .slide {
         color: @negative-color;
         text-align: center;
-        background-position: right center;
+        background-position: center;
         display: flex;
         width: 100%;
-        align-items: center;
+        align-items: flex-end;
         padding-top: 70px;
         padding-bottom: 30px;
         @media @tablet {
@@ -1066,10 +1098,16 @@ a {
         }
     }
     .slide-text {
-        margin-bottom: 30px;
+        margin-bottom: 0px;
+        @media @tablet {
+            margin-bottom: 30px;
+        }
     }
     .slide-text, .slide-text p {
-        font-size: 22px;
+        font-size: 16px;
+        @media @tablet {
+            font-size: 22px;
+        }
     }
     .owl-buttons {
         div.owl-prev,
@@ -1146,17 +1184,18 @@ a {
     .countdown-col {
         border: 2px solid @negative-color;
         .border-radius(50%);
-        width: 110px;
-        height: 110px;
+        width: 70px;
+        height: 70px;
         color: @negative-color;
         background-color: @rgba3;
-        padding-top: 28px;
-        margin: 15px;
+        padding-top: 10px;
+        margin: 5px;
         text-align: center;
         display: inline-block;
         @media @tablet {
             width: 150px;
             height: 150px;
+            margin: 15px;
             padding-top: 35px;
             margin-left: 15px;
             margin-right: 15px;
@@ -1165,11 +1204,11 @@ a {
             }
         }
         .countdown-time {
-            font-size: 35px;
+            font-size: 24px;
             line-height: 1;
             font-weight: bold;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 0;
             @media @tablet {
                 font-size: 48px;
                 margin-bottom: 5px;
@@ -1189,6 +1228,9 @@ a {
 ! 06. Section: Wedding Bio
 ========================================================== */
 .wedding-bio-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     @media @laptop {
         &:before {
             content: '';
@@ -1216,13 +1258,21 @@ a {
     .wedding-bio-item {
         background-color: rgba(256, 256, 256, 0.5);
         padding: 15px;
-        margin: 30px 0;
+        margin: 15px 0;
         text-align: center;
+        width: calc(~"100% - 20px");
+        @media @tablet {
+            margin: 30px 15px;
+            width: calc(~"50% - 40px");
+        }
         .wedding-bio-title {
             font-weight: 300;
             font-size: 35px;
             .color1;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            @media @laptop {
+                margin-bottom: 20px;
+            }
             span {
                 display: block;
                 .font3;
@@ -1252,7 +1302,7 @@ a {
             }
         }
         .wedding-bio-content {
-            padding: 0 30px 0;
+            padding: 30px 30px 0;
             @media @laptop {
                 padding: 30px 15px;
             }
@@ -2007,7 +2057,7 @@ a {
     }
     textarea.form-control {
         min-height: 70px;
-        padding: 20px;
+        overflow: hidden;
         width: 100% !important;
     }
     span.form-label {

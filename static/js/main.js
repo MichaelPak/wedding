@@ -95,48 +95,46 @@
         });
 
         //Hero Slider
-        var mainSlider = $(".main-carousel");
+        // var mainSlider = $(".main-carousel");
 
-        mainSlider.on('initialized.owl.carousel', function(e){
-            $('.slide-title').addClass('active');
-            $('.slide-icon').addClass('active');
-            $('.slide-text').addClass('active');
-            $('.featured-slide .primary-btn').addClass('active');
-        });
+        // mainSlider.on('initialized.owl.carousel', function(e){
+        //     $('.slide-title').addClass('active');
+        //     $('.slide-icon').addClass('active');
+        //     $('.slide-text').addClass('active');
+        //     $('.featured-slide .primary-btn').addClass('active');
+        // });
 
-        mainSlider.owlCarousel({
-            items: 1,
-            nav: true,
-            loop: false
-        });
+        // mainSlider.owlCarousel({
+        //     items: 1,
+        //     nav: true,
+        //     loop: false
+        // });
 
-        mainSlider.on('changed.owl.carousel', function(e){
-            $('.slide-title').removeClass('active');
-            $('.slide-icon').removeClass('active');
-            $('.slide-text').removeClass('active');
-            $('.featured-slide .primary-btn').removeClass('active');
-            return false;
-        });
+        // mainSlider.on('changed.owl.carousel', function(e){
+        //     $('.slide-title').removeClass('active');
+        //     $('.slide-icon').removeClass('active');
+        //     $('.slide-text').removeClass('active');
+        //     $('.featured-slide .primary-btn').removeClass('active');
+        //     return false;
+        // });
 
 
-        mainSlider.on('translated.owl.carousel', function(e){
-            $('.slide-title').addClass('active');
-            $('.slide-icon').addClass('active');
-            $('.slide-text').addClass('active');
-            $('.featured-slide .primary-btn').addClass('active');
-            return false;
-        });
+        // mainSlider.on('translated.owl.carousel', function(e){
+        //     $('.slide-title').addClass('active');
+        //     $('.slide-icon').addClass('active');
+        //     $('.slide-text').addClass('active');
+        //     $('.featured-slide .primary-btn').addClass('active');
+        //     return false;
+        // });
 
         //=====>  Countdown (Edit this with your own date)  <====
-        $("#bearr-countdown-item").countdown( "2017/08/05 14:00:00" , function (event) {
-            var $this = $(this).html(event.strftime(
-                '' +
-                '<div class="countdown-col"><span class="countdown-time"> %-D </span> <span class="countdown-type"> Дней </span></div> ' +
-                '<div class="countdown-col"><span class="countdown-time"> %H </span> <span class="countdown-type"> Часов </span></div>' +
-                '<div class="countdown-col"><span class="countdown-time"> %M </span> <span class="countdown-type"> Минут </span></div>'));
-            // + '<div class="countdown-col"><span class="countdown-time"> %S </span> <span class="countdown-type">Seconds </span></div>'));
-        });
-
+        $("#bearr-countdown-item")
+            .countdown('2017/08/05 14:00:00')
+            .on('update.countdown', function(event) {
+                $(this).html(event.strftime(`<div class="countdown-col"><span class="countdown-time"> %-D </span> <span class="countdown-type"> Дней </span></div>
+            <div class="countdown-col"><span class="countdown-time"> %H </span> <span class="countdown-type"> Часов </span></div>
+            <div class="countdown-col"><span class="countdown-time"> %M </span> <span class="countdown-type"> Минут </span></div>`))
+            });
         //Testimonials
          $(".testimonial-carousel").owlCarousel({
             items: 1,
