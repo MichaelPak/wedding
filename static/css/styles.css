@@ -2473,6 +2473,8 @@ a:focus {
   padding-bottom: 0;
 }
 .gallery-images {
+  display: flex;
+  flex-wrap: wrap;
   margin-left: 0;
   margin-right: 0;
 }
