@@ -2420,6 +2420,9 @@ a:focus {
   padding: 15px 0;
   color: #fff;
   border-bottom: 3px solid #cb9fb8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .events-reminder-item .events-item-content ul li:last-child {
   border-bottom: none;
@@ -2432,6 +2435,9 @@ a:focus {
 }
 .events-reminder-item .events-item-icon {
   margin-right: 10px;
+  display: block;
+  width: 30px;
+  text-align: center;
 }
 .events-reminder-item .events-item-icon i {
   font-size: 30px;
