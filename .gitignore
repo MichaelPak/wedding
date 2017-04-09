@@ -3,3 +3,4 @@ venv
 *.pyc
 wedding/settings.py
 db.sqlite3
+.DS_Store
