@@ -1018,10 +1018,10 @@ a:focus {
   background-size: cover;
   position: relative;
 }
-.section.with-bg#rsvp {
+.section.with-bg.bg-cover {
   color: white;
 }
-.section.with-bg#rsvp:before {
+.section.with-bg.bg-cover:before {
   content: '';
   position: absolute;
   top: 0;
@@ -1075,7 +1075,7 @@ a:focus {
 }
 .text-section {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-weight: normal;
   max-width: 870px;
   margin-right: auto;
@@ -1084,14 +1084,9 @@ a:focus {
   font-size: 15px;
   line-height: 1.6;
 }
-@media (min-width: 1400px) {
-  .text-section {
-    margin-bottom: 80px;
-  }
-}
 .text-section2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: normal;
   max-width: 870px;
   margin-right: auto;
@@ -1099,11 +1094,6 @@ a:focus {
   opacity: 0.9;
   font-size: 20px;
   line-height: 1.6;
-}
-@media (min-width: 1400px) {
-  .text-section2 {
-    margin-bottom: 40px;
-  }
 }
 @media (min-width: 768px) {
   .title-section2:before {
@@ -1867,9 +1857,6 @@ a:focus {
   margin-bottom: 0px;
 }
 @media (min-width: 768px) {
-  .main-carousel .slide-text {
-    margin-bottom: 30px;
-  }
 }
 .main-carousel .slide-text,
 .main-carousel .slide-text p {
@@ -2103,11 +2090,6 @@ a:focus {
 }
 .wedding-bio-wrapper .wedding-bio-item .wedding-bio-content {
   padding: 30px 30px 0;
-}
-@media (min-width:992px) {
-  .wedding-bio-wrapper .wedding-bio-item .wedding-bio-content {
-    padding: 30px 15px;
-  }
 }
 .wedding-bio-wrapper .wedding-bio-item .wedding-bio-content {
   font-weight: normal;
@@ -2399,7 +2381,7 @@ a:focus {
 }
 @media (min-width:992px) {
   .events-reminder-item .events-item-content {
-    padding: 30px;
+    padding: 15px 30px;
   }
 }
 .events-reminder-item .events-item-content ul {
@@ -2431,7 +2413,7 @@ a:focus {
 @media (min-width:992px) {
   .events-reminder-item .events-item-content ul li {
     font-size: 18px;
-    padding: 22px 0;
+    padding: 18px 0;
   }
 }
 .events-reminder-item .events-item-icon {
