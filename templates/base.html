@@ -165,15 +165,14 @@
 <!-- Back to Top Button -->
 <div id="back-to-top" class="back-to-top back-to-top-hide"><i class="fa fa-angle-up"></i></div>
 <!-- /Back to Top Button -->
-
 <!-- Contact Form - Ajax Messages
 ========================================================= -->
 <!-- Form Sucess -->
 <div class="form-result modal-wrap" id="contactSuccess">
   <div class="modal-bg"></div>
   <div class="modal-content">
-    <h4 class="modal-title"><i class="fa fa-check-circle"></i> Success!</h4>
-    <p>Your message has been sent to us.</p>
+    <h4 class="modal-title"><i class="fa fa-check-circle"></i> Поздравляем!</h4>
+    <p>Вы успешно зарегистрировались на свадьбу.</p>
   </div>
 </div>
 <!-- /Form Sucess -->
@@ -198,7 +197,11 @@
 <!-- / Contact Form - Ajax Messages
 ========================================================= -->
 
-
+{% if registered %}
+    <script>
+        var REGISTERED = true;
+    </script>
+{% endif %}
 <!-- >> JS
 ============================================================================== -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -2144,22 +2144,29 @@ span.not-valid-tip {
 }
 
 .modal-content {
-  background: #fff;
+  background: #e6d6df;
   font-size: 18px;
   position: fixed;
   top: 40%;
-  left: 50%;
-  margin-left: -125px;
-  width: 250px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 350px;
+  width: calc(100% - 10px);
   z-index: 9999;
   padding: 10px 20px;
   color: #111;
+  text-align: center;
   .modal-title {
-    color: #111;
+    color: #414042;
     font-size: 22px;
     border-bottom: 1px solid #ccc;
     margin-bottom: 5px;
     font-weight: bold;
+  }
+  i {
+      color: #b43c76;
+      margin-right: 5px;
   }
   p {
     font-size: 14px;

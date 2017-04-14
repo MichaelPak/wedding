@@ -236,6 +236,13 @@
         modalWrap.on('click', function () {
           hideModal();
         });
+
+        if (REGISTERED) {
+            var reg = $('#reg');
+            document.body.scrollTop = reg.offset().top;
+            console.log(reg, reg.offset().top, document.body.scrollTop);
+            $("#contactSuccess").fadeIn(300).addClass('modal-show');
+        }
         //End - Document Ready
     });
 
