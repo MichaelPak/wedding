@@ -143,6 +143,7 @@
 
         // Gallery Fancybox
         $(".bearr-gallery-item a").simpleLightbox();
+        $("a.post-featured-image").simpleLightbox();
 
         //Git List
         $(".clients-carousel").owlCarousel({

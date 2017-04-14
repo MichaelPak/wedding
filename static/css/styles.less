@@ -106,7 +106,7 @@ img.aligncenter {
     max-width: 1250px;
     width: 100%;
     &--mini {
-        max-width: 1000px;
+        max-width: 750px;
     }
 }
 
@@ -2209,6 +2209,10 @@ span.not-valid-tip {
                 //.transform-scale(1.1);
             }
         }
+        &--half {
+            display: inline-block;
+            width: calc(~'50% - 2px');
+        }
     }
     .post-content {
         padding: 25px 15px;
@@ -2956,4 +2960,9 @@ body {
     .primary-btn:hover {
         color: #cb9fb8;
     }
+}
+
+.img-bordered {
+    border: 2px solid #cfa7be;
+    margin-bottom: 10px;
 }
