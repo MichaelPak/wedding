@@ -176,31 +176,25 @@
   </div>
 </div>
 <!-- /Form Sucess -->
-<!-- form-error -->
-<div class="form-result modal-wrap" id="contactError">
+<!-- Form Sucess -->
+<div class="form-result modal-wrap" id="hotelSuccess">
   <div class="modal-bg"></div>
   <div class="modal-content">
-    <h4 class="modal-title"><i class="fa fa-times"></i> Error</h4>
-    <p>There was an error sending your message.</p>
+    <h4 class="modal-title"><i class="fa fa-check-circle"></i> Поздравляем!</h4>
+    <p>Вы успешно оставили заявку!</p>
   </div>
 </div>
-<!-- /form-error -->
-<!-- form-sending -->
-<div class="form-result modal-wrap" id="contactWait">
-  <div class="modal-bg"></div>
-  <div class="modal-content">
-    <div class="modal-loader"></div>
-    <p>Sending Message, please wait...</p>
-  </div>
-</div>
-<!-- /form-sending -->
+<!-- /Form Sucess -->
+
 <!-- / Contact Form - Ajax Messages
 ========================================================= -->
-
+<script>
+    var REGISTERED = false;
+</script>
 {% if registered %}
-    <script>
-        var REGISTERED = true;
-    </script>
+<script>
+    REGISTERED = true;
+</script>
 {% endif %}
 <!-- >> JS
 ============================================================================== -->

@@ -105,6 +105,9 @@ img.aligncenter {
 .container {
     max-width: 1250px;
     width: 100%;
+    &--mini {
+        max-width: 1000px;
+    }
 }
 
 #body-content {
@@ -2039,6 +2042,9 @@ a {
     .primary-btn {
         font-size: 20px;
         width: 100%;
+        @media @mobile {
+            font-size: 16px;
+        }
     }
 }
 
@@ -2911,5 +2917,43 @@ body {
 .ie9, .ie8 {
     #page-loader {
         display: none;
+    }
+}
+
+
+#map {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+    border: 2px solid #cfa7be;
+    @media @tablet {
+        height: 400px;
+    }
+}
+
+.map {
+    &__title {
+        font-size: 18px;
+        color: #ba4d83;
+        @media @mobile {
+            font-size: 16px;
+        }
+    }
+    &__desc {
+        font-size: 14px;
+        color: #414042;
+    }
+}
+
+.form-invert {
+    .form-control {
+        color: #414042 !important;
+        border-color: #cb9fb8;
+        &:focus {
+            border-color: #cb9fb8;
+        }
+    }
+    .primary-btn:hover {
+        color: #cb9fb8;
     }
 }

@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
 {% block main-content %}
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <div id="primary" class="">
-
+        
             <!-- Content Area -->
             <div class="content-area">
-                <div class="container">
+                <div class="container container--mini">
                     <div class="row">
 
                         <!-- Main -->
@@ -20,6 +21,7 @@
                                         <div class="post-content">
                                             <!-- .entry header -->
                                             <header class="entry-header">
+                                                <div class="entry-meta"></div>
                                                 <!-- .entry-meta -->
                                                 <div class="post-has-ct"></div>
                                                 <h1 class="entry-title">Шато-отель "Немчиновка парк"</h1>
@@ -31,13 +33,13 @@
 
                                                 <p>Для проведения нашего свадебного торжества мы выбрали шато-отель "Немчиновка-парк".</p>
 
-                                                <h1>Карта (М.О. Одинцовский р-н, с. Немчиновка, ул. 2-я Запрудная, 36)</h1>
+                                                <div id="map"></div>
 
                                                 <p>Отель предлагает всем желающим остаться на ночь после нашего свадебного банкета!
                                                     Стоимость двухместного номера для наших гостей - 4420 рублей, трёхместного - 5 525 рублей, в стоимость включён завтрак.
                                                     Если у вас есть желание остаться на ночь, просьба заполните форму ниже.</p>
 
-                                                <form class="form row rsvp" method="POST" action="{% url 'hotel' %}">
+                                                <form class="form row rsvp form-invert" method="POST" action="{% url 'hotel' %}">
                                                     {% csrf_token %}
                                                     <!-- Form Group -->
                                                     <div class="col-sm-6 form-group">
@@ -57,7 +59,7 @@
 
                                                     <!-- Form Group -->
                                                     <div class="col-sm-12 form-group">
-                                                        <label>Можно написать какие-то пожелания или просто что-нибудь приятное</label>
+                                                        <label>Комментарий</label>
                                                         <textarea class="form-control required" rows="3" id="message" name="comment"></textarea>
                                                     </div>
                                                     <!-- Form Group -->

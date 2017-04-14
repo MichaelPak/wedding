@@ -1,6 +1,5 @@
 //Use Strict Mode
 (function ($) {
-    "use strict";
 
     var windowHeight = $(window).height();
 
@@ -236,15 +235,48 @@
         modalWrap.on('click', function () {
           hideModal();
         });
-
+        
         if (REGISTERED) {
             var reg = $('#reg');
-            document.body.scrollTop = reg.offset().top;
-            console.log(reg, reg.offset().top, document.body.scrollTop);
-            $("#contactSuccess").fadeIn(300).addClass('modal-show');
+            var formHotel = $('.form.row.rsvp');
+            if (reg.length) {
+                document.body.scrollTop = reg.offset().top;
+                $("#contactSuccess").fadeIn(300).addClass('modal-show');
+            } else if (formHotel.length) {
+                document.body.scrollTop = formHotel.offset().top;
+                $("#hotelSuccess").fadeIn(300).addClass('modal-show');
+            }
         }
+
+ 
         //End - Document Ready
     });
 
     //End - Use Strict mode
 })(jQuery);
+
+
+if ($('#map').length) {
+    ymaps.ready(init);
+}
+
+function init () {
+    var myMap = new ymaps.Map("map", {
+            center: [55.72680948, 37.36941494],
+            zoom: 11,
+            controls: ['zoomControl', 'fullscreenControl']
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark = new ymaps.Placemark([55.72680948, 37.36941494], {
+            // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+            balloonContentBody: [
+                '<div class="map__title">ШАТО-ОТЕЛЬ "НЕМЧИНОВКА ПАРК"</div>',
+                '<div class="map__desc">М.О. Одинцовский р-н, с. Немчиновка, ул. 2-я Запрудная, 36</div>'
+            ].join(''),
+            hintContent: 'ШАТО-ОТЕЛЬ "НЕМЧИНОВКА ПАРК"'
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+    myPlacemark.balloon.open();
+}
