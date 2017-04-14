@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block main-content %}
+
+    {% if registered %}
+        <script>alert('dfsadsadsa');</script>
+    {% endif %}
+
     <div id="primary" class="">
 
         <!-- SECTION: Slideshow -->
@@ -11,7 +16,6 @@
                      style="background-image: url('/static/img/banner1.jpg');">
                     <div class="slide-inner">
                         <div class="slide-icon active"></div>
-                        {#                        <h1 class="slide-title active">Михаил &amp; Яна</h1>#}
                         <p class="slide-text active">Мы станем самой счастливой парой в мире через</p>
                         <div class="slide-extra">
                             <!-- countdown (edit date on main.js file)-->
@@ -110,9 +114,8 @@
                                     <li>
                                         <span class="events-item-icon"><i class="fa fa-map-marker fa-2" aria-hidden="true"></i></span>
                                         <span class="events-reminder-date-link">
-                                            <a target="_blank"
-                                               href="https://yandex.ru/maps/?mode=search&ll=37.367599%2C55.723631&z=15&text=%D0%A8%D0%B0%D1%82%D0%BE-%D0%BE%D1%82%D0%B5%D0%BB%D1%8C%20%22%D0%9D%D0%B5%D0%BC%D1%87%D0%B8%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%9F%D0%B0%D1%80%D0%BA%22&sll=37.367599%2C55.723631&sspn=0.091925%2C0.029065&sctx=CAAAAAEAMEj6tIrSQkBfJR%2B7C%2BJLQM3CAQBgiLc%2FD4MQ9PO6nT8AAAAABQAAAAAAAAABnlxkbFa7NlgBAAAAAe%2F%2Ffz8AAAAABQAAACMAAABkaXJlY3RfdXNlX2FsbF9jYXRlZ29yaWVzX2FzX3RleHQ9MSQAAABkaXJlY3RfdXNlX2NhdGVnb3J5X2FzX3RleHRfYXBwZW5kPTEsAAAAZGlyZWN0X3VzZV9ydWJyaWNfcXVlcnlfY2F0ZWdvcmllc19hc190ZXh0PTEmAAAAcmFua2luZ19mb3JtdWxhPWNvbW1vbl9saWdodF9mbWwxNzY3MjMmAAAAcmFua2luZ19mb3JtdWxhPWNvbW1vbl9saWdodF9mbWwxNzY3MjM%3D&ol=biz&oid=1387251840">
-                                               Шато-отель "Немчиновка-Парк"
+                                            <a href="{% url 'hotel' %}">
+                                                Шато-отель "Немчиновка-Парк"
                                             </a>
                                         </span>
                                     </li>

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block main-content %}
+    <div id="primary" class="">
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- Main -->
+                        <div class="col-md-12">
+                            <main id="main" class="site-main">
+
+                                <!-- post -->
+                                <article class="post type-post status-publish format-standard has-post-thumbnail hentry">
+                                    <div class="post-element">
+                                        <!-- Featured image -->
+                                        <!-- / Featured-image -->
+                                        <div class="post-content">
+                                            <!-- .entry header -->
+                                            <header class="entry-header">
+                                                <!-- .entry-meta -->
+                                                <div class="post-has-ct"></div>
+                                                <h1 class="entry-title">Шато-отель "Немчиновка парк"</h1>
+                                            </header>
+                                            <!-- .entry-header -->
+                                            <!-- .entry-content -->
+                                            <div class="entry-content">
+                                                <h4>Дорогие гости!</h4>
+
+                                                <p>Для проведения нашего свадебного торжества мы выбрали шато-отель "Немчиновка-парк".</p>
+
+                                                <h1>Карта (М.О. Одинцовский р-н, с. Немчиновка, ул. 2-я Запрудная, 36)</h1>
+
+                                                <p>Отель предлагает всем желающим остаться на ночь после нашего свадебного банкета!
+                                                    Стоимость двухместного номера для наших гостей - 4420 рублей, трёхместного - 5 525 рублей, в стоимость включён завтрак.
+                                                    Если у вас есть желание остаться на ночь, просьба заполните форму ниже.</p>
+
+                                                <form class="form row rsvp" method="POST" action="{% url 'hotel' %}">
+                                                    {% csrf_token %}
+                                                    <!-- Form Group -->
+                                                    <div class="col-sm-6 form-group">
+                                                        <label>Имя</label>
+                                                        <input type="text" class="form-control required" id="name" name="firstname"/>
+                                                        <!-- Form Group -->
+                                                    </div>
+                                                    <!-- Form Group -->
+
+                                                    <!-- Form Group -->
+                                                    <div class="col-sm-6 form-group">
+                                                        <label>Фамилия</label>
+                                                        <input type="text" class="form-control required" id="surname" name="lastname"/>
+                                                        <!-- Form Group -->
+                                                    </div>
+                                                    <!-- Form Group -->
+
+                                                    <!-- Form Group -->
+                                                    <div class="col-sm-12 form-group">
+                                                        <label>Можно написать какие-то пожелания или просто что-нибудь приятное</label>
+                                                        <textarea class="form-control required" rows="3" id="message" name="comment"></textarea>
+                                                    </div>
+                                                    <!-- Form Group -->
+
+                                                    <!-- Form Group -->
+                                                    <div class="col-sm-12 form-group">
+                                                        <button type="submit" class="primary-btn with-bg">Зарегистрироваться!</button>
+                                                    </div>
+                                                    <!-- Form Group -->
+                                                </form>
+                                            </div>
+                                            <!-- /.entry-content -->
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- /post -->
+                            </main>
+                        </div>
+                        <!-- Main -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- Content Area -->
+
+    </div>
+{% endblock %}

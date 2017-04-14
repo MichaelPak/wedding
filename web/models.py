@@ -9,3 +9,10 @@ class Registration(models.Model):
     lastname = models.CharField(u'Фамилия', max_length=32)
     comment = models.TextField(u'Комментарий', max_length=1000)
     is_submit = models.BooleanField(u'Подтверждено', default=False)
+
+
+class Hotel(models.Model):
+    firstname = models.CharField(u'Имя', max_length=32)
+    lastname = models.CharField(u'Фамилия', max_length=32)
+    comment = models.TextField(u'Комментарий', max_length=1000)
+    is_submit = models.BooleanField(u'Подтверждено', default=False)

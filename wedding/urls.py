@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
     url(r'^dress_code/', views.dress_code, name='dress-code'),
+    url(r'^hotel/', views.hotel, name='hotel'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
