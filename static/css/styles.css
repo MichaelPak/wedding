@@ -3076,7 +3076,12 @@ span.not-valid-tip {
 }
 .post-element .post-featured-image--half {
   display: inline-block;
-  width: calc(50% - 2px);
+  width: calc(100% / 3 - 2px);
+}
+@media (min-width: 240px) and (max-width: 719px) {
+  .post-element .post-featured-image--half {
+    width: 100%;
+  }
 }
 .post-element .post-content {
   padding: 25px 15px;

@@ -1,69 +1,74 @@
 {% extends "base.html" %}
 
 {% block main-content %}
-    <div id="primary" class="">
+<div id="primary" class="">
 
-            <!-- Content Area -->
-            <div class="content-area">
-                <div class="container container--mini">
-                    <div class="row">
+    <!-- Content Area -->
+    <div class="content-area">
+        <div class="container container--mini">
+            <div class="row">
 
-                        <!-- Main -->
-                        <div class="col-md-12">
-                            <main id="main" class="site-main">
+                <!-- Main -->
+                <div class="col-md-12">
+                    <main id="main" class="site-main">
 
-                                <!-- post -->
-                                <article class="post type-post status-publish format-standard has-post-thumbnail hentry">
-                                    <div class="post-element">
-                                        <!-- Featured image -->
-                                        <!-- / Featured-image -->
-                                        <div class="post-content">
-                                            <!-- .entry header -->
-                                            <header class="entry-header">
-                                                <!-- .entry-meta -->
-                                                <div class="post-has-ct"></div>
-                                                <h1 class="entry-title">Dress code</h1>
-                                            </header>
-                                            <!-- .entry-header -->
-                                            <!-- .entry-content -->
-                                            <div class="entry-content">
-                                                <h4 class="h4-title">Дорогие гости!</h4>
-                                                <p> Мы очень старались сделать наше торжество красивым и незабываемым!
-                                                    Местом проведения выбран <a href="{% url 'hotel' %}"> шато-отель "Немчиновка-парк"</a>. Парковая зона и шатёр, где будет проходить наш праздник,
-                                                    выполнены в стиле средневекового замка, поэтому, чтобы сохранить торжественную атмосферу, просим вас соблюсти
-                                                    официальный дресс-код (для мужчин - костюм/брюки и рубашка, для дам - вечернее/коктейльное платье).
-                                                    Мы будем очень рады и благодарны, если вы также поддержите выбранную нами цветовую палитру при выборе наряда для нашего праздника!</p>
+                        <!-- post -->
+                        <article class="post type-post status-publish format-standard has-post-thumbnail hentry">
+                            <div class="post-element">
+                                <!-- Featured image -->
+                                <!-- / Featured-image -->
+                                <div class="post-content">
+                                    <!-- .entry header -->
+                                    <header class="entry-header">
+                                        <!-- .entry-meta -->
+                                        <div class="post-has-ct"></div>
+                                        <h1 class="entry-title">Dress code</h1>
+                                    </header>
+                                    <!-- .entry-header -->
+                                    <!-- .entry-content -->
+                                    <div class="entry-content">
+                                        <h4 class="h4-title">Дорогие гости!</h4>
+                                        <p> Мы очень старались сделать наше торжество красивым и незабываемым! Местом проведения
+                                            выбран <a href="{% url 'hotel' %}"> шато-отель "Немчиновка-парк"</a>. Парковая
+                                            зона и шатёр, где будет проходить наш праздник, выполнены в стиле средневекового
+                                            замка, поэтому, чтобы сохранить торжественную атмосферу, просим вас соблюсти
+                                            официальный дресс-код (для мужчин - костюм/брюки и рубашка, для дам - вечернее/коктейльное
+                                            платье). Мы будем очень рады и благодарны, если вы также поддержите выбранную
+                                            нами цветовую палитру при выборе наряда для нашего праздника!</p>
 
-                                                <h4>Основная цветовая палитра нашего праздника:</h4>
-                                                <center>
-                                                <div class="post-featured-image post-featured-image--half" style="width: 75%;">
-                                                    <img src="/static/img/colors.jpg" class="img-bordered">
-                                                </div>
-                                                </center>
-
-                                                <h4>Цвета и примеры дамских и мужских нарядов:</h4>
-                                                <center>
-                                                    <a href="/static/img/girls.jpg" class="post-featured-image post-featured-image--half">
-                                                    <img width="770" height="525" src="/static/img/girls.jpg">
-                                                </a>
-                                                <a href="/static/img/boys.jpg" class="post-featured-image post-featured-image--half">
-                                                    <img width="770" height="525" src="/static/img/boys.jpg">
-                                                </a>
-                                                </center>
+                                        <h4>Основная цветовая палитра нашего праздника:</h4>
+                                        <center>
+                                            <div class="post-featured-image post-featured-image--half" style="width: 75%;">
+                                                <img src="/static/img/colors.jpg" class="img-bordered">
                                             </div>
-                                            <!-- /.entry-content -->
-                                        </div>
+                                        </center>
+
+                                        <h4>Цвета и примеры дамских и мужских нарядов:</h4>
+                                        <center>
+                                            <a href="/static/img/dress-code-1.jpg" class="post-featured-image post-featured-image--half">
+                                                <img width="770" height="525" src="/static/img/dress-code-1.jpg">
+                                            </a>
+                                            <a href="/static/img/dress-code-2.jpg" class="post-featured-image post-featured-image--half">
+                                                <img width="770" height="525" src="/static/img/dress-code-2.jpg">
+                                            </a>
+                                            <a href="/static/img/dress-code-3.jpg" class="post-featured-image post-featured-image--half">
+                                                <img width="770" height="525" src="/static/img/dress-code-3.jpg">
+                                            </a>
+                                        </center>
                                     </div>
-                                </article>
-                                <!-- /post -->
-                            </main>
-                        </div>
-                        <!-- Main -->
-
-                    </div>
+                                    <!-- /.entry-content -->
+                                </div>
+                            </div>
+                        </article>
+                        <!-- /post -->
+                    </main>
                 </div>
-            </div>
-            <!-- Content Area -->
+                <!-- Main -->
 
+            </div>
+        </div>
     </div>
+    <!-- Content Area -->
+
+</div>
 {% endblock %}
