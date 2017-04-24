@@ -35,11 +35,10 @@
                                                 Отель предлагает всем желающим остаться на ночь после нашего свадебного банкета!
                                                     Стоимость двухместного номера для наших гостей - 4420 рублей, трёхместного - 5 525 рублей, в стоимость включён завтрак.
                                                     Если у вас есть желание остаться на ночь, просьба заполните форму ниже.</p>
-                                                <div id="map"></div>
                                                 <form class="form row rsvp form-invert" method="POST" action="{% url 'hotel' %}">
                                                     {% csrf_token %}
                                                     <!-- Form Group -->
-                                                    <div class="col-sm-6 form-group">
+                                                    <div class="col-sm-4 form-group">
                                                         <label>Имя</label>
                                                         <input type="text" class="form-control required" id="name" name="firstname"/>
                                                         <!-- Form Group -->
@@ -47,7 +46,7 @@
                                                     <!-- Form Group -->
 
                                                     <!-- Form Group -->
-                                                    <div class="col-sm-6 form-group">
+                                                    <div class="col-sm-4 form-group">
                                                         <label>Фамилия</label>
                                                         <input type="text" class="form-control required" id="surname" name="lastname"/>
                                                         <!-- Form Group -->
@@ -55,18 +54,19 @@
                                                     <!-- Form Group -->
 
                                                     <!-- Form Group -->
-                                                    <div class="col-sm-12 form-group">
-                                                        <label>Список гостей</label>
-                                                        <textarea class="form-control required" rows="3" id="message" name="comment"></textarea>
+                                                    <div class="col-sm-4 form-group">
+                                                        <label>Количество гостей</label>
+                                                        <input type="text" class="form-control required" id="message" name="comment"/>
                                                     </div>
                                                     <!-- Form Group -->
 
                                                     <!-- Form Group -->
                                                     <div class="col-sm-12 form-group">
-                                                        <button type="submit" class="primary-btn with-bg">Отправить</button>
+                                                        <button type="submit" class="primary-btn with-bg" style="margin-top: 0 !important;">Отправить</button>
                                                     </div>
                                                     <!-- Form Group -->
                                                 </form>
+                                                <div id="map" style="margin-top: 30px;"></div>
                                             </div>
                                             <!-- /.entry-content -->
                                         </div>

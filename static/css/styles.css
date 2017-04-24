@@ -2905,7 +2905,7 @@ a:focus {
   }
 }
 .form .form-group {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 .form .form-group:last-child {
   margin-bottom: 0;
@@ -3925,6 +3925,9 @@ body .simple-lightbox .sl-navigation {
   #map {
     height: 400px;
   }
+}
+.map {
+  margin-top: 30px;
 }
 .map__title {
   font-size: 18px;
