@@ -14,7 +14,9 @@ def index(request):
                 lastname=form.cleaned_data['lastname'],
                 comment=form.cleaned_data['comment']
             ).save()
-        return render(request, 'index.html', {"registered": True})
+            return render(request, 'index.html', {"registered": True})
+        else:
+            return render(request, 'index.html', {"errors": True})
     return render(request, 'index.html')
 
 
@@ -38,5 +40,5 @@ def hotel(request):
 class RegistrationForm(forms.Form):
     firstname = forms.CharField()
     lastname = forms.CharField()
-    comment = forms.CharField(widget=forms.Textarea, max_length=1000)
+    comment = forms.CharField(widget=forms.Textarea, max_length=1000, required=False)
 

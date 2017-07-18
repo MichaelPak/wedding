@@ -249,6 +249,12 @@
             }
         }
 
+        if (ERRORS) {
+            var reg = $('#reg');
+            document.body.scrollTop = reg.offset().top;
+            $("#contactFailure").fadeIn(300).addClass('modal-show');
+        }
+
  
         //End - Document Ready
     });

@@ -180,7 +180,7 @@
                     {% csrf_token %}
                     <!-- Form Group -->
                     <div class="col-sm-6 form-group">
-                        <label>Имя</label>
+                        <label>Имя<span style="color: #cb9fb8;">*</span></label>
                         <input type="text" class="form-control required" id="name" name="firstname"/>
                         <!-- Form Group -->
                     </div>
@@ -188,7 +188,7 @@
 
                     <!-- Form Group -->
                     <div class="col-sm-6 form-group">
-                        <label>Фамилия</label>
+                        <label>Фамилия<span style="color: #cb9fb8;">*</span></label>
                         <input type="text" class="form-control required" id="surname" name="lastname"/>
                         <!-- Form Group -->
                     </div>
@@ -196,7 +196,7 @@
 
                     <!-- Form Group -->
                     <div class="col-sm-12 form-group">
-                        <label>Хочешь ли принять участие в девичнике/мальчишнике</label>
+                        <label>Можете оставить пожелание, комментарий или все, что придёт Вам в голову</label>
                         <textarea class="form-control required" rows="3" id="message" name="comment"></textarea>
                     </div>
                     <!-- Form Group -->

@@ -177,6 +177,15 @@
 </div>
 <!-- /Form Sucess -->
 <!-- Form Sucess -->
+<div class="form-result modal-wrap" id="contactFailure">
+  <div class="modal-bg"></div>
+  <div class="modal-content">
+    <h4 class="modal-title"><i class="fa fa-times-circle"></i> Ошибка!</h4>
+    <p>Имя и фамилия обязательны для заполнения.</p>
+  </div>
+</div>
+<!-- /Form Sucess -->
+<!-- Form Sucess -->
 <div class="form-result modal-wrap" id="hotelSuccess">
   <div class="modal-bg"></div>
   <div class="modal-content">
@@ -190,12 +199,21 @@
 ========================================================= -->
 <script>
     var REGISTERED = false;
+    var ERRORS = false;
 </script>
+
 {% if registered %}
 <script>
     REGISTERED = true;
 </script>
 {% endif %}
+
+{% if errors %}
+<script>
+    ERRORS = true;
+</script>
+{% endif %}
+
 <!-- >> JS
 ============================================================================== -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
