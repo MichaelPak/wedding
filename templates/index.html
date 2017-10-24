@@ -11,324 +11,27 @@
                 <!-- Slide -->
                 <div class="featured-slide slide bg-cover viewport"
                      style="background-image: url('/static/img/banner1.jpg');">
-                    <div class="slide-inner">
-                        <div class="slide-icon active"></div>
-                        <p class="slide-text active">Мы станем самой счастливой парой в мире через</p>
-                        <div class="slide-extra">
-                            <!-- countdown (edit date on main.js file)-->
-                            <div class="bearr-countdown-wrapper">
-                                <div id="bearr-countdown-item" class="bearr-countdown-item"></div>
-                            </div>
-                            <!-- /countdown -->
-                        </div>
-                    </div>
                 </div>
                 <!-- /Slide -->
             </div>
         </div>
         <!-- /SECTION: Slideshow -->
 
-        <!-- SECTION: Wedding Bio -->
-        <div class="section section-wedding-bio with-bg" id="wedding-bio">
-            <div class="container">
-                <!-- Section Title -->
-                {#                <div class="title-section-wrapper">#}
-                {#                    <!-- Title -->#}
-                {#                    <h2 class="title-section">Мы</h2>#}
-                {#                    <!-- /title -->#}
-                {#                    <!-- Text -->#}
-                {#                    <p class="text-section">Хотим, как в сказке, свое "happily ever after".</p>#}
-                {#                    <!-- /text -->#}
-                {#                </div>#}
-                <!-- /Section Title -->
-
-                <!-- Wedding Bio -->
-                <div class="row wedding-bio-wrapper">
-                    <div class="wedding-bio-item wedding-bio-item-bride">
-                        <!-- Picture -->
-                        <figure class="wedding-bio-image"><img src="/static/img/yana.jpg" alt="" class="responsive-image"></figure>
-                        <!-- / Picture -->
-                        <div class="wedding-bio-content">
-                            <!-- name -->
-                            <h2 class="heading wedding-bio-title"><span>Яна</span></h2>
-                            <!-- /Name -->
-                            <!-- Description -->
-{#                            <div class="wedding-bio-text">#}
-{#                                <p>Люблю читать и вкусно покушать. Мечтаю объездить весь мир.</p>#}
-{#                            </div>#}
-                            <!-- /Description -->
-                        </div>
-                    </div>
-                    <div class="wedding-bio-item wedding-bio-item-groom">
-                        <figure class="wedding-bio-image"><img src="/static/img/michael.jpg" alt="" class="responsive-image"></figure>
-                        <div class="wedding-bio-content">
-                            <h2 class="heading wedding-bio-title"><span>Михаил</span></h2>
-{#                            <div class="wedding-bio-text">#}
-{#                                <p>Люблю Яну.</p>#}
-{#                            </div>#}
-                        </div>
-                    </div>
-                </div>
-                <!-- /Wedding Bio -->
-            </div>
-
-        </div>
-        <!-- /SECTION: Wedding Bio -->
-
-        <!-- SECTION: Events -->
-        <div class="section section-contact bg-cover with-bg" id="special-events" style="background-image: url(/static/img/back1.jpg);">
-            <div class="container">
-
-                <!-- Section Title -->
-                <div class="title-section-wrapper">
-                    <!-- Title -->
-                    <h2 class="title-section"></h2>
-                    <!-- /title -->
-                </div>
-                <!-- /Section Title -->
-
-                <!-- row -->
-                <div class="row" style="display: flex; justify-content: center;">
-                    <!-- /col -->
-                    <!-- col -->
-                    <div class="col-sm-5 col-xs-12">
-                        <!-- Event Item -->
-                        <div class="events-reminder-item">
-                            <header>
-                                <h3 class="events-item-heading">Свадебное торжество</h3>
-                            </header>
-                            <div class="events-item-content">
-                                <ul>
-                                    <li>
-                                        <span class="events-item-icon"><i class="fa fa-clock-o fa-2" aria-hidden="true"></i></span>
-                                        <span
-                                            class="events-reminder-time-content">14:00</span>
-                                    </li>
-                                    <li>
-                                        <span class="events-item-icon"><i class="fa fa-calendar-o fa-2" aria-hidden="true"></i></span><span
-                                            class="events-reminder-date-content">Суббота, 5 Августа 2017</span>
-                                    </li>
-                                    <li>
-                                        <span class="events-item-icon"><i class="fa fa-map-marker fa-2" aria-hidden="true"></i></span>
-                                        <span class="events-reminder-date-link">
-                                            <a href="{% url 'hotel' %}">
-                                                Шато-отель "Немчиновка-Парк"
-                                            </a>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="events-item-icon">
-                                            <i class="fa fa-user-secret fa-2" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="events-reminder-date-link">
-                                            <a href="{% url 'dress-code' %}">Dress code</a>
-                                        </span>
-                                    </li>
-                                    <!--<li>
-                                        <span class="events-item-icon"><i class="fa fa-gift fa-2" aria-hidden="true"></i></span><span class="events-reminder-date-content">
-                                            <i class="fa fa-rub fa-2"></i>
-                                            <i class="fa fa-usd fa-2"></i>
-                                            <i class="fa fa-eur fa-2"></i>
-                                        </span>
-                                    </li>-->
-                                    <li>
-                                        <span class="events-item-icon">
-                                            <i class="fa fa-instagram fa-2" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="events-reminder-date-link">
-                                                <a target="_blank" href="https://www.instagram.com/explore/tags/pak_fairytale_wedding/">#pak_fairytale_wedding</a>
-                                            </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /Event Item -->
-                    </div>
-                    <!-- /col -->
-                </div>
-                <!-- /row -->
-
-
-            </div>
-
-        </div>
-        <!-- / SECTION: Events -->
-
-        <!-- RSVP -->
-        <div class="section section-events with-bg" id="reg">
-{#        <div class="section with-dark-bg section-events" id="special-events" style="background-image: url('/static/img/special-event-bg.jpg');">#}
-            <div class="container">
-
-                <!-- Section Title -->
-                <div class="title-section-wrapper">
-                    <!-- Title -->
-                    <h2 class="title-section"></h2>
-                    <!-- /title -->
-                    <!-- Text -->
-                    <p class="text-section2">Пожалуйста, подтверди свое присутсвие.</p>
-                    <p class="text-section">
-                        Мы окончательно утверждаем количество наших гостей за 2 недели до свадьбы,
-                        поэтому просим до 21 июля зарегистрироваться, заполнив форму ниже.
-                        В случае каких-либо изменений просьба оповестить нас.
-                    </p>
-                    <!-- /text -->
-                </div>
-                <!-- /Section Title -->
-
-                <!-- Form -->
-                <form class="form row rsvp" method="POST" action="{% url 'index' %}">
-                    {% csrf_token %}
-                    <!-- Form Group -->
-                    <div class="col-sm-6 form-group">
-                        <label>Имя<span style="color: #cb9fb8;">*</span></label>
-                        <input type="text" class="form-control required" id="name" name="firstname"/>
-                        <!-- Form Group -->
-                    </div>
-                    <!-- Form Group -->
-
-                    <!-- Form Group -->
-                    <div class="col-sm-6 form-group">
-                        <label>Фамилия<span style="color: #cb9fb8;">*</span></label>
-                        <input type="text" class="form-control required" id="surname" name="lastname"/>
-                        <!-- Form Group -->
-                    </div>
-                    <!-- Form Group -->
-
-                    <!-- Form Group -->
-                    <div class="col-sm-12 form-group">
-                        <label>Можете оставить пожелание, комментарий или все, что придёт Вам в голову</label>
-                        <textarea class="form-control required" rows="3" id="message" name="comment"></textarea>
-                    </div>
-                    <!-- Form Group -->
-
-                    <!-- Form Group -->
-                    <div class="col-sm-12 form-group">
-                        <button type="submit" class="primary-btn with-bg">Зарегистрироваться!</button>
-                    </div>
-                    <!-- Form Group -->
-                </form>
-                <!-- /Form -->
-            </div>
-        </div>
-        <!-- /RSVP -->
-
-        <!-- Pre-marriageParty -->
-        <div class="section bg-cover with-bg section-events" id="Pre-marriageParty"
-             style="background-image: url('/static/img/back2.jpg');">
-            <div class="container">
-
-                <!-- Section Title -->
-                <div class="title-section-wrapper">
-                    <!-- Title -->
-                    <h2 class="title-section"></h2>
-                    <!-- /title -->
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-sm-6">
-                            <!-- Event Item -->
-                            <div class="events-reminder-item">
-                                <header>
-                                    <h3 class="events-item-heading">Мальчишник</h3>
-                                </header>
-                                <div class="events-item-content">
-                                    <ul>
-                                        <li>
-                                            <span class="events-item-icon">
-                                                <i class="fa fa-clock-o fa-2" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="events-reminder-time-content">20:00</span>
-                                        </li>
-                                        <li>
-                                            <span class="events-item-icon">
-                                                <i class="fa fa-calendar-o fa-2" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="events-reminder-date-content">29 июля 2017</span>
-                                        </li>
-                                        <li>
-                                            <span class="events-item-icon">
-                                                <i class="fa fa-map-marker fa-2" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="events-reminder-date-address">Москва</span>
-                                        </li>
-                                        <li>
-                                            <span class="events-item-icon">
-                                                <i class="fa fa-user fa-2" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="events-reminder-time-content">Сергей +7(985)274-70-69</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- /Event Item -->
-                        </div>
-                        <!-- /col -->
-                        <!-- col -->
-                        <div class="col-sm-6">
-                            <!-- Event Item -->
-                            <div class="events-reminder-item">
-                                <header>
-                                    <h3 class="events-item-heading">Девичник</h3>
-                                </header>
-                                <div class="events-item-content">
-                                    <ul>
-                                        <li>
-                                            <span class="events-item-icon">
-                                                <i class="fa fa-clock-o fa-2" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="events-reminder-time-content">20:00</span>
-                                        </li>
-                                        <li>
-                                            <span class="events-item-icon">
-                                                <i class="fa fa-calendar-o fa-2" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="events-reminder-date-content">29 июля 2017</span>
-                                        </li>
-                                        <li>
-                                            <span class="events-item-icon">
-                                                <i class="fa fa-map-marker fa-2" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="events-reminder-date-address">Санкт-Петербург</span>
-                                        </li>
-                                        <li>
-                                            <span class="events-item-icon">
-                                                <i class="fa fa-user fa-2" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="events-reminder-time-content">Валерия +7(916)323-92-42</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- /Event Item -->
-                        </div>
-                        <!-- /col -->
-                    </div>
-                    <!-- /row -->
-                </div>
-                <!-- /Section Title -->
-
-            </div>
-            <!-- /Pre-marriageParty -->
-        </div>
-
         <div class="section section-wedding-bio with-bg">
             <!-- Gallery -->
             <div class="section section-gallery" id="gallery">
-
                 <!-- Section Title -->
                 <div class="title-section-wrapper">
                     <!-- Title -->
-                    <h2 class="title-section"></h2>
+                    <h3 class="title-section">Дорогие друзья и близкие!</h3>
                     <!-- /title -->
                     <!-- Text -->
-                    <p class="text-section2">Здесь будут фотографии с нашего торжества.</p>
-                    <p class="text-section">А пока что можно полюбоваться на нас!</p>
-                    <!-- /text -->
-                </div>
-                <!-- /Section Title -->
 
-                <!-- Gallery Images -->
-                <div class="gallery-images row">
+                    <p class="text-section">Мы счастливы, что именно с вами разделили радость и счастье этого дня!<br />
+                    Спасибо за то, что украсили собой наши свадебные фото!</p>
+
+                    <!-- Gallery Images -->
+                <div class="gallery-images row" style="margin-top: 10px">
                     <div class="col-lg-3 col-md-4 col-sm-6 no-space">
                         <div class="bearr-gallery-item"><a href="static/img/photo1.jpg"><img
                                 src="static/img/photo1.jpg" alt="Gallery Image"></a></div>
@@ -346,11 +49,11 @@
                                 src="static/img/photo4.jpg" alt="Gallery Image"></a></div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 no-space">
-                        <div class="bearr-gallery-item"><a href="static/img/photo6.jpg"><img
+                        <div class="bearr-gallery-item"><a href="static/img/photo5.jpg"><img
                                 src="static/img/photo6.jpg" alt="Gallery Image"></a></div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 no-space">
-                        <div class="bearr-gallery-item"><a href="static/img/photo5.jpg"><img
+                        <div class="bearr-gallery-item"><a href="static/img/photo6.jpg"><img
                                 src="static/img/photo5.jpg" alt="Gallery Image"></a></div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 no-space">
@@ -363,6 +66,12 @@
                     </div>
                 </div>
                 <!-- /Gallery Images -->
+
+                    <p class="text-section" style="margin-top: 20px">Все фото можно посмотреть
+                        <a href="https://www.dropbox.com/sh/rphs7jnw1oww04l/AADNAocG5nXF8iEo8fo6laTJa?dl=0" target="_blank"> здесь</a></p>
+                    <!-- /text -->
+                </div>
+                <!-- /Section Title -->
             </div>
             <!-- /Gallery -->
         </div>
