@@ -1,3 +1,3 @@
 # Website for my wedding
 
-http://wedding.ispaceup.com
+https://wedding.pak.digital
